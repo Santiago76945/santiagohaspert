@@ -1,0 +1,403 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Estilos del header (reutilizado) */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #222, #111);
+    padding: 20px 40px;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+#header-home {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: none; /* Inicialmente oculto */
+}
+
+/* Estilos de la sección hero */
+.hero {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.consult-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.consult-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.consult-link:hover {
+    color: #0056b3;
+}
+
+/* Estilos de las opciones de consulta */
+.consult-option {
+    background: #fff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.consult-option h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.consult-option .price {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.consult-option p,
+.consult-option ul {
+    color: #555;
+    line-height: 1.6;
+}
+
+.consult-option ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.consult-option ul li {
+    margin-bottom: 5px;
+}
+
+.consult-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.consult-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.consult-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.availability-note {
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Estilos del formulario de consulta */
+.consulta-form {
+    padding: 40px 20px;
+    background: #ffffff;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.consulta-form h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+}
+
+.consulta-form p {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.consulta-form .form-group {
+    margin-bottom: 20px;
+}
+
+.consulta-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.consulta-form .required {
+    color: #d9534f; /* Rojo suave */
+    font-weight: normal;
+    font-size: 0.85em;
+    margin-left: 5px;
+}
+
+.consulta-form input,
+.consulta-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #555;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.consulta-form input:focus,
+.consulta-form textarea:focus {
+    border-color: #007bff; /* Color de enfoque */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.1);
+}
+
+.contact-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s;
+    display: block;
+    width: 100%;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Estilos del footer (reutilizado) */
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0 20px;
+    line-height: 1.5;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #ddd;
+}
+
+/* Estilos generales para la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Sección de consulta presencial */
+#presencial {
+    background: #c1cbd8; /* Color de fondo similar al mostrado */
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#presencial .consult-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#presencial img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Sección de consulta online */
+#online {
+    background: #d9c6a5; /* Color de fondo similar al mostrado */
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#online img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.consult-option h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.consult-option .price {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.consult-option p,
+.consult-option ul {
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.consult-option ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.consult-option ul li {
+    margin-bottom: 5px;
+}
+
+/* Botones de consulta */
+.consult-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    max-width: 150px;
+}
+
+.consult-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.consult-button:hover:not(:disabled) {
+    background-color: #111;
+}
+
+.availability-note {
+    font-size: 0.9em;
+    color: #d9534f; /* Color rojo suave para la disponibilidad */
+    margin-top: 5px;
+}
+

@@ -1,0 +1,128 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Santiago Haspert Piaggio</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="/index.html" id="header-home">
+            <h1>Dr. Santiago Haspert Piaggio</h1>
+        </a>
+        <div class="menu-icon">☰</div> <!-- Ícono del menú hamburguesa -->
+        <nav class="nav-menu">
+            <ul>
+                <div class="close-icon">&times;</div>
+                <!-- Cambié los IDs en el menú de navegación -->
+                <li><a href="#" id="consulta-nav">Solicitar consulta jurídica</a></li>
+                <li><a href="#" id="academico-nav">Contenido académico para estudiantes de Abogacía</a></li>
+                <li><a href="#" id="tienda-nav">Tienda</a></li>
+                <li><a href="#" id="about-nav">Acerca de mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>ASESORÍA LEGAL DE CALIDAD Y A MEDIDA</h2>
+        </div>
+    </section>
+
+    <section class="welcome">
+        <div class="welcome-content">
+            <img src="/images/logo.png" alt="Logo SH" class="logo">
+            <div class="text-content">
+                <h3>BIENVENIDO A SANTIAGOHASPERT.COM</h3>
+                <p>
+                    ¡Bienvenido a nuestro sitio web! Aquí encontrará una amplia gama de servicios destinados a aclarar cualquier tipo de incertidumbre legal que pueda tener y a brindarle asistencia en situaciones legales en las que nos necesite. Además, ofrecemos material educativo para estudiantes de abogacía en nuestras secciones especializadas. Ante cualquier consulta, no dude en ponerse en contacto con nosotros. ¡Gracias por visitarnos!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="services">
+        <h2>NUESTROS SERVICIOS</h2>
+        <div class="services-grid">
+            <!-- Servicio 1: Asesoramiento Legal -->
+            <div class="service-item">
+                <img src="/images/asesoramiento-legal.png" alt="Asesoramiento Legal">
+                <h3>Asesoramiento Legal Personalizado</h3>
+                <p>
+                    Ofrecemos asesoramiento legal en diversas áreas como derecho civil, jubilaciones y pensiones, derecho laboral, derecho tributario y más. Nuestro equipo de profesionales está comprometido a resolver tus inquietudes y brindarte soluciones legales efectivas.
+                </p>
+                <!-- Mantuve el ID original aquí -->
+                <a href="/pages/solicitar-consulta.html" class="service-button" id="consulta-button">Solicitar consulta jurídica</a>
+            </div>
+
+            <!-- Servicio 2: Material Académico -->
+            <div class="service-item">
+                <img src="/images/material-academico.png" alt="Material Académico para Estudiantes de Derecho">
+                <h3>Material Académico para Estudiantes de Derecho</h3>
+                <p>
+                    Creemos en compartir el conocimiento. Accede a resúmenes, podcasts y otros recursos de estudio completamente gratuitos para apoyar tu formación en la carrera de abogacía.
+                </p>
+                <!-- Mantuve el ID original aquí -->
+                <a href="/pages/contenido-academico.html" class="service-button" id="academico-button">Ver material académico</a>
+            </div>
+
+            <!-- Servicio 3: Clases Particulares -->
+            <div class="service-item">
+                <img src="/images/clases-particulares.png" alt="Clases Particulares para Estudiantes de Derecho">
+                <h3>Clases Particulares Personalizadas</h3>
+                <p>
+                    Obtén clases particulares de derecho adaptadas a tus necesidades desde cualquier lugar del país. Diseñamos una propuesta educativa a tu medida para ayudarte a alcanzar tus objetivos académicos y profesionales.
+                </p>
+                <!-- Mantuve el ID original aquí -->
+                <button class="service-button" id="clases-button">Solicitar clases particulares</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección de suscripción al newsletter -->
+    <section class="newsletter">
+        <h2>¡Suscríbete a nuestro newsletter, recibe códigos de descuento y entérate de todas las novedades!</h2>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Escribe tu correo electrónico...">
+            <button class="subscribe-button">SUSCRIBIRSE</button>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Dr. Santiago Haspert Piaggio</h3>
+            <p>Paraná y Eva Perón S/N<br>Santa Elena, Entre Ríos.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="/pages/solicitar-consulta.html">Solicitar consulta jurídica</a></li>
+                    <li><a href="/pages/contenido-academico.html">Contenido académico para estudiantes de Abogacía</a></li>
+                    <li><a href="/pages/tienda.html">Tienda</a></li>
+                    <li><a href="/pages/about-me.html">Acerca de mí</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/buttons-redirection.js"></script>
+
+</body>
+
+</html>

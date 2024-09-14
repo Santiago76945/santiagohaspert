@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Consulta Jurídica - Dr. Santiago Haspert Piaggio</title>
+    <link rel="stylesheet" href="/css/solicitar-consulta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="/index.html" id="header-home">
+            <h1>Dr. Santiago Haspert Piaggio</h1>
+        </a>
+        <div class="menu-icon">☰</div> <!-- Ícono del menú hamburguesa -->
+        <nav class="nav-menu">
+            <ul>
+                <div class="close-icon">&times;</div>
+                <li><a href="#" id="consulta-nav">Solicitar consulta jurídica</a></li>
+                <li><a href="#" id="academico-nav">Contenido académico para estudiantes de Abogacía</a></li>
+                <li><a href="#" id="tienda-nav">Tienda</a></li>
+                <li><a href="#" id="about-nav">Acerca de mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero hero--light">
+        <h2>Solicitar consulta jurídica</h2>
+        <p>Encuentre la solución jurídica más conveniente para usted: Dispone de atención de calidad tanto en nuestro servicio presencial como en línea. Sin importar su preferencia, ofrecemos soluciones legales a medida y nos comprometemos a brindar un servicio de excelencia.</p>
+        <div class="consult-options">
+            <a href="#presencial" class="consult-link">Consulta presencial →</a>
+            <a href="#online" class="consult-link">Consulta online →</a>
+        </div>
+    </section>
+
+    <section id="presencial" class="consult-option">
+        <div class="consult-content">
+            <h3>Consulta Legal Presencial</h3>
+            <p>En nuestro estudio jurídico, ubicado en Paraná y Eva Perón, Santa Elena, Entre Ríos, proporcionamos servicios de consulta jurídica presencial de calidad. Nuestro experimentado equipo de abogados está comprometido en brindar asesoramiento legal especializado en una amplia gama de áreas legales.</p>
+            <button class="consult-button" disabled>NO DISPONIBLE</button>
+            <p class="availability-note">Disponible a fines de 2024</p>
+        </div>
+        <img src="/images/consulta-presencial.png" alt="Estudio Jurídico">
+    </section>
+    
+    <section id="online" class="consult-option">
+        <img src="/images/consulta-online.png" alt="Consulta Online">
+        <div class="consult-content">
+            <h3>Consulta Legal Online</h3>
+            <p>A través de una videollamada de Google Meet, nuestro equipo está disponible para brindar asesoramiento personalizado en diversas áreas del derecho. Ya sea que necesite orientación en contratos, problemas laborales o distintas disputas legales, estamos aquí para ayudarlo.</p>
+            <button class="consult-button">SOLICITAR</button>
+        </div>
+    </section>
+
+    <section class="consulta-form">
+        <h3>¿TIENE ALGUNA DUDA?</h3>
+        <p>Si no está seguro sobre qué tipo de modalidad de consulta se ajusta mejor a sus necesidades, o si tiene alguna otra pregunta antes de solicitar dicha consulta, no dude en ponerse en contacto con nosotros a través del siguiente formulario. Nuestro equipo se pondrá en contacto con usted a la mayor brevedad posible.</p>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Nombre y Apellido <span class="required">(required)</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico <span class="required">(required)</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+            <button type="submit" class="contact-button">CONTACTAR</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Dr. Santiago Haspert Piaggio</h3>
+            <p>Paraná y Eva Perón S/N<br>Santa Elena, Entre Ríos.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="/pages/solicitar-consulta.html">Solicitar consulta jurídica</a></li>
+                    <li><a href="/pages/contenido-academico.html">Contenido académico para estudiantes de Abogacía</a></li>
+                    <li><a href="/pages/tienda.html">Tienda</a></li>
+                    <li><a href="/pages/about-me.html">Acerca de mí</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="/scripts/buttons-redirection.js"></script>
+    <script src="/scripts/header.js"></script>
+</body>
+</html>
