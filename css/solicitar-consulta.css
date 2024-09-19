@@ -1,3 +1,5 @@
+/* solicitar-consulta.css */
+
 /* Estilos globales */
 body {
     font-family: Arial, sans-serif;
@@ -26,7 +28,7 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
-#header-home {
+#header-link-home {
     text-decoration: none;
     color: inherit;
     display: inline-block;
@@ -144,10 +146,10 @@ body {
 /* Estilos del formulario de consulta */
 .consulta-form {
     padding: 40px 20px;
-    background: #ffffff;
-    max-width: 600px;
+    background: linear-gradient(to bottom, #c3c3c3, #ffffff); /* Degradado suave de celeste a blanco */
+    width: 100%;
     margin: 20px auto;
-    text-align: left;
+    text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -155,15 +157,18 @@ body {
 .consulta-form h3 {
     font-size: 1.8em;
     margin-bottom: 20px;
-    color: #007bff;
+    color: #000000;
     text-align: center;
 }
 
 .consulta-form p {
+    display: block;
+    margin: 0 auto;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6;
     text-align: center;
+    width: 70%;
 }
 
 .consulta-form .form-group {
@@ -187,7 +192,7 @@ body {
 
 .consulta-form input,
 .consulta-form textarea {
-    width: 100%;
+    width: 70%;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -203,7 +208,7 @@ body {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.1);
 }
 
-.contact-button {
+#btn-contactar {
     background-color: #007bff;
     color: white;
     border: none;
@@ -216,10 +221,11 @@ body {
     text-align: center;
     transition: background-color 0.3s ease, transform 0.2s;
     display: block;
-    width: 100%;
+    width: 70%;
+    margin: 0 auto; /* esto junto con display block centró el botón */
 }
 
-.contact-button:hover {
+#btn-contactar:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
@@ -283,19 +289,9 @@ body {
     color: #ddd;
 }
 
-/* Estilos generales para la página */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #333;
-    background-color: #f9f9f9;
-}
-
 /* Sección de consulta presencial */
-#presencial {
-    background: #c1cbd8; /* Color de fondo similar al mostrado */
+#consulta-presencial {
+    background: #c1cbd8; /* Color de fondo */
     padding: 40px 20px;
     margin: 20px auto;
     max-width: 800px;
@@ -308,13 +304,13 @@ body {
     gap: 20px;
 }
 
-#presencial .consult-content {
+#consulta-presencial .consult-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#presencial img {
+#consulta-presencial img {
     max-width: 250px;
     height: auto;
     border-radius: 8px;
@@ -322,8 +318,8 @@ body {
 }
 
 /* Sección de consulta online */
-#online {
-    background: #d9c6a5; /* Color de fondo similar al mostrado */
+#consulta-online {
+    background: #d9c6a5; /* Color de fondo */
     padding: 40px 20px;
     margin: 20px auto;
     max-width: 800px;
@@ -336,7 +332,7 @@ body {
     gap: 20px;
 }
 
-#online img {
+#consulta-online img {
     max-width: 250px;
     height: auto;
     border-radius: 8px;
@@ -399,5 +395,27 @@ body {
     font-size: 0.9em;
     color: #d9534f; /* Color rojo suave para la disponibilidad */
     margin-top: 5px;
+}
+
+
+@media (max-width: 690px) {
+    .consult-option {
+        flex-direction: column; /* Cambia la dirección del contenido a columna */
+        text-align: center; /* Centra todo el texto dentro del contenedor */
+    }
+
+    .consult-option img {
+        max-width: 100%; /* Asegura que la imagen ocupe el ancho disponible */
+        margin-bottom: 20px; /* Añade un espacio debajo de la imagen */
+    }
+
+    .consult-content {
+        text-align: center; /* Centra el texto dentro del bloque de contenido */
+        margin: 0 auto; /* Centra el bloque de texto */
+    }
+
+    .consult-option h3, .consult-option p {
+        text-align: center; /* Asegura que los títulos y párrafos estén centrados */
+    }
 }
 

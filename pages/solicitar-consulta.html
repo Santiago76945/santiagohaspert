@@ -1,3 +1,5 @@
+<!-- solicitar-consulta.html -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,17 +12,17 @@
 </head>
 <body>
     <header class="header">
-        <a href="/index.html" id="header-home">
+        <a href="/index.html" id="header-link-home">
             <h1>Dr. Santiago Haspert Piaggio</h1>
         </a>
         <div class="menu-icon">☰</div> <!-- Ícono del menú hamburguesa -->
         <nav class="nav-menu">
             <ul>
                 <div class="close-icon">&times;</div>
-                <li><a href="#" id="consulta-nav">Solicitar consulta jurídica</a></li>
-                <li><a href="#" id="academico-nav">Contenido académico para estudiantes de Abogacía</a></li>
-                <li><a href="#" id="tienda-nav">Tienda</a></li>
-                <li><a href="#" id="about-nav">Acerca de mí</a></li>
+                <li><a href="#" id="link-consulta">Solicitar consulta jurídica</a></li>
+                <li><a href="#" id="link-academico">Contenido académico para estudiantes de Abogacía</a></li>
+                <li><a href="#" id="link-tienda">Tienda</a></li>
+                <li><a href="#" id="link-about">Acerca de mí</a></li>
             </ul>
         </nav>
     </header>
@@ -29,12 +31,12 @@
         <h2>Solicitar consulta jurídica</h2>
         <p>Encuentre la solución jurídica más conveniente para usted: Dispone de atención de calidad tanto en nuestro servicio presencial como en línea. Sin importar su preferencia, ofrecemos soluciones legales a medida y nos comprometemos a brindar un servicio de excelencia.</p>
         <div class="consult-options">
-            <a href="#presencial" class="consult-link">Consulta presencial →</a>
-            <a href="#online" class="consult-link">Consulta online →</a>
+            <a href="#consulta-presencial" class="consult-link" id="link-presencial">Consulta presencial →</a>
+            <a href="#consulta-online" class="consult-link" id="link-online">Consulta online →</a>
         </div>
     </section>
 
-    <section id="presencial" class="consult-option">
+    <section id="consulta-presencial" class="consult-option">
         <div class="consult-content">
             <h3>Consulta Legal Presencial</h3>
             <p>En nuestro estudio jurídico, ubicado en Paraná y Eva Perón, Santa Elena, Entre Ríos, proporcionamos servicios de consulta jurídica presencial de calidad. Nuestro experimentado equipo de abogados está comprometido en brindar asesoramiento legal especializado en una amplia gama de áreas legales.</p>
@@ -44,12 +46,12 @@
         <img src="/images/consulta-presencial.png" alt="Estudio Jurídico">
     </section>
     
-    <section id="online" class="consult-option">
+    <section id="consulta-online" class="consult-option">
         <img src="/images/consulta-online.png" alt="Consulta Online">
         <div class="consult-content">
             <h3>Consulta Legal Online</h3>
             <p>A través de una videollamada de Google Meet, nuestro equipo está disponible para brindar asesoramiento personalizado en diversas áreas del derecho. Ya sea que necesite orientación en contratos, problemas laborales o distintas disputas legales, estamos aquí para ayudarlo.</p>
-            <button class="consult-button">SOLICITAR</button>
+            <button class="consult-button" id="btn-solicitar-online">SOLICITAR</button>
         </div>
     </section>
 
@@ -58,18 +60,18 @@
         <p>Si no está seguro sobre qué tipo de modalidad de consulta se ajusta mejor a sus necesidades, o si tiene alguna otra pregunta antes de solicitar dicha consulta, no dude en ponerse en contacto con nosotros a través del siguiente formulario. Nuestro equipo se pondrá en contacto con usted a la mayor brevedad posible.</p>
         <form action="#" method="post">
             <div class="form-group">
-                <label for="name">Nombre y Apellido <span class="required">(required)</span></label>
-                <input type="text" id="name" name="name" required>
+                <label for="form-name">Nombre y Apellido <span class="required">(required)</span></label>
+                <input type="text" id="form-name" name="name" required>
             </div>
             <div class="form-group">
-                <label for="email">Correo electrónico <span class="required">(required)</span></label>
-                <input type="email" id="email" name="email" required>
+                <label for="form-email">Correo electrónico <span class="required">(required)</span></label>
+                <input type="email" id="form-email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="message">Mensaje</label>
-                <textarea id="message" name="message" rows="5"></textarea>
+                <label for="form-message">Mensaje</label>
+                <textarea id="form-message" name="message" rows="5"></textarea>
             </div>
-            <button type="submit" class="contact-button">CONTACTAR</button>
+            <button type="submit" class="contact-button" id="btn-contactar">CONTACTAR</button>
         </form>
     </section>
 
@@ -95,5 +97,8 @@
 
     <script src="/scripts/buttons-redirection.js"></script>
     <script src="/scripts/header.js"></script>
+    <script src="/scripts/solicitar-consulta.js"></script>
+    <script src="/scripts/footer.js"></script>
 </body>
 </html>
+
