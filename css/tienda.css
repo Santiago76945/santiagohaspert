@@ -237,21 +237,6 @@ body {
     display: inline-block;
 }
 
-/* Navigation Menu */
-.nav-menu {
-    display: none; /* Inicialmente oculto */
-}
-
-/* Ajusta los estilos de los elementos de la lista */
-.nav-menu ul {
-    list-style: none;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: inherit; /* Mantén el color del texto */
-}
-
 /* Footer */
 .footer {
     background: #000;
@@ -309,57 +294,6 @@ body {
 
 .footer-nav a:hover {
     color: #ddd;
-}
-
-/* Media Queries */
-@media (max-width: 1599px) {
-    .nav-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #222;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-        z-index: 1000;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-menu li {
-        margin: 20px 0;
-    }
-
-    .menu-icon {
-        display: block;
-        font-size: 1.5em;
-        color: #fff;
-        cursor: pointer;
-    }
-}
-
-@media (min-width: 1600px) {
-    .nav-menu {
-        display: flex;
-        flex-direction: row;
-        position: static;
-    }
-
-    .menu-icon {
-        display: none;
-    }
 }
 
 /* Estilos para el disclaimer */
@@ -517,5 +451,56 @@ body {
     line-height: 1.5;
 }
 
+/* Navigation Menu */
+.nav-menu {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    justify-content: flex-start; /* Empieza desde la parte superior */
+    padding: 50px 20px; /* Espaciado para que los elementos no queden pegados a los bordes */
+    z-index: 1000;
+}
 
+/* Muestra el menú cuando tiene la clase 'active' */
+.nav-menu.active {
+    display: flex;
+}
 
+/* Ajusta los estilos de los elementos de la lista */
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav-menu li {
+    margin: 20px 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #bebebe; /* Asegura que los enlaces tengan un color visible */
+    font-size: 18px; /* Tamaño de fuente */
+    padding: 10px 0;
+    display: block;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.nav-menu a:hover {
+    color: #fff;
+}
+
+/* Estilos del icono del menú */
+.menu-icon {
+    display: block;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+}
