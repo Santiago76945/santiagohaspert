@@ -43,6 +43,18 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         window.location.href = '/index.html';
     });
+
+    // Redireccionar para "Contenido académico para estudiantes" y "Sacar turno para consulta"
+    document.getElementById('academic-content').addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = '/pages/contenido-academico.html';
+    });
+
+    document.getElementById('book-consult').addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = '/pages/solicitar-consulta.html';
+    });
 });
+
 
 

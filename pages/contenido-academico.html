@@ -38,9 +38,9 @@
         <h3>Material de estudio para estudiantes de Abogacía.</h3>
         <p>En esta sección del sitio web, te ofrecemos contenido completamente gratuito especialmente diseñado para estudiantes de derecho. Encuentra nuestros videos en YouTube, donde explicamos de manera concisa y clara diversas materias complejas del derecho.</p>
         <div class="links">
-            <a href="#">Video resúmenes</a>
-            <a href="#">Centro de descargas</a>
-            <a href="#">Clases particulares online</a>
+            <a href="#" id="video-resumenes-btn">Video resúmenes</a>
+            <a href="#" id="centro-descargas-btn">Centro de descargas</a>
+            <a href="#" id="clases-particulares-btn">Clases particulares online</a>
         </div>
     </section>
 
@@ -64,78 +64,60 @@
         </div>
     </section>
 
-    <section class="download-center">
-        <h3>↓ CENTRO DE DESCARGAS ↓</h3>
-        <p>Aquí puedes encontrar archivos .mp3 de los resúmenes de YouTube para escucharlos cómodamente en formato podcast en tu aplicación favorita. Próximamente además, archivos .pdf relativos al contenido de dicho canal.</p>
-        <div class="downloads">
-            <!-- Resúmenes en formato audio -->
-            <div class="download-item audio">
-                <div class="gradient-box">
-                    <span class="icon"><i class="fas fa-headphones"></i></span>
-                    <h4>Resumen de DIP (Podcast)</h4>
-                    <p>Resumen de derecho internacional público en formato .mp3.</p>
-                    <a href="#" class="download-link">descarga gratuita</a>
-                </div>
-            </div>
-            <div class="download-item audio">
-                <div class="gradient-box">
-                    <span class="icon"><i class="fas fa-headphones"></i></span>
-                    <h4>Resumen de DPP (Podcast)</h4>
-                    <p>Resumen de Derecho Procesal Penal de Córdoba en formato .mp3.</p>
-                    <a href="#" class="download-link">descarga gratuita</a>
-                </div>
-            </div>
-            <div class="download-item audio">
-                <div class="gradient-box">
-                    <span class="icon"><i class="fas fa-headphones"></i></span>
-                    <h4>Resumen de DL (Podcast)</h4>
-                    <p>Resumen de Derecho Laboral Argentino en formato .mp3.</p>
-                    <a href="#" class="download-link">descarga gratuita</a>
-                </div>
-            </div>
-    
-            <!-- Resúmenes en formato eBook -->
-            <div class="download-item ebook">
-                <div class="gradient-box">
-                    <span class="icon"><i class="fas fa-book"></i></span>
-                    <h4>Resumen de DIP (eBook)</h4>
-                    <p>Resumen de derecho internacional público en formato .pdf.</p>
-                    <a href="#" class="download-link">descargar versión de prueba (gratuita)</a>
-                    <a href="#" class="download-link">descargar versión completa (de pago)</a>
-                </div>
-            </div>
-            <div class="download-item ebook">
-                <div class="gradient-box">
-                    <span class="icon"><i class="fas fa-book"></i></span>
-                    <h4>Resumen de DL (eBook)</h4>
-                    <p>Resumen de derecho laboral argentino en formato .pdf.</p>
-                    <a href="#" class="download-link">descargar versión de prueba (gratuita)</a>
-                    <a href="#" class="download-link">descargar versión completa (de pago)</a>
-                </div>
+    <div class="downloads">
+        <!-- DIP Podcast -->
+        <div class="download-item audio">
+            <div class="gradient-box">
+                <span class="icon"><i class="fas fa-headphones"></i></span>
+                <h4>Resumen de DIP (Podcast)</h4>
+                <p>Resumen de derecho internacional público en formato .mp3.</p>
+                <a href="#" id="download-dip-podcast">descarga gratuita</a>
             </div>
         </div>
-    </section>
     
-
-    <section class="ebooks">
-        <h3>eBooks</h3>
-        <div class="ebooks-gallery">
-            <div class="ebook-item">
-                <img src="../images/ebook-1.png" alt="Resumen de Derecho Internacional Público">
-                <h4>Resumen de Derecho Internacional Público (eBook)</h4>
-                <p>Adquiere una versión completa y detallada del derecho internacional en formato eBook.</p>
-                <a href="#" class="download-link">Descargar versión gratuita</a>
-                <a href="#" class="download-link">Descargar versión de pago</a>
-            </div>
-            <div class="ebook-item">
-                <img src="../images/ebook-2.png" alt="Resumen de Derecho Laboral">
-                <h4>Resumen de Derecho Laboral (eBook)</h4>
-                <p>Este eBook abarca de manera rigurosa el Derecho del Trabajo en Argentina.</p>
-                <a href="#" class="download-link">Descargar versión gratuita</a>
-                <a href="#" class="download-link">Descargar versión de pago</a>
+        <!-- DPP Podcast -->
+        <div class="download-item audio">
+            <div class="gradient-box">
+                <span class="icon"><i class="fas fa-headphones"></i></span>
+                <h4>Resumen de DPP (Podcast)</h4>
+                <p>Resumen de Derecho Procesal Penal de Córdoba en formato .mp3.</p>
+                <a href="#" id="download-dpp-podcast">descarga gratuita</a>
             </div>
         </div>
-    </section>
+    
+        <!-- DL Podcast -->
+        <div class="download-item audio">
+            <div class="gradient-box">
+                <span class="icon"><i class="fas fa-headphones"></i></span>
+                <h4>Resumen de DL (Podcast)</h4>
+                <p>Resumen de Derecho Laboral Argentino en formato .mp3.</p>
+                <a href="#" id="download-dl-podcast">descarga gratuita</a>
+            </div>
+        </div>
+    
+        <!-- DIP eBook -->
+        <div class="download-item ebook">
+            <div class="gradient-box">
+                <span class="icon"><i class="fas fa-book"></i></span>
+                <h4>Resumen de DIP (eBook)</h4>
+                <p>Resumen de derecho internacional público en formato .pdf.</p>
+                <a href="#" id="download-dip-ebook-free">descargar versión gratuita</a>
+                <a href="#" id="download-dip-ebook-paid">descargar versión completa (de pago)</a>
+            </div>
+        </div>
+    
+        <!-- DL eBook -->
+        <div class="download-item ebook">
+            <div class="gradient-box">
+                <span class="icon"><i class="fas fa-book"></i></span>
+                <h4>Resumen de DL (eBook)</h4>
+                <p>Resumen de derecho laboral argentino en formato .pdf.</p>
+                <a href="#" id="download-dl-ebook-free">descargar versión gratuita</a>
+                <a href="#" id="download-dl-ebook-paid">descargar versión completa (de pago)</a>
+            </div>
+        </div>
+    </div>
+    
 
     <footer class="footer">
         <div class="footer-content">
@@ -157,8 +139,34 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Redirigir al hacer clic en "Video resúmenes" hacia la sección correspondiente
+            document.getElementById('video-resumenes-btn').addEventListener('click', (event) => {
+                event.preventDefault();
+                document.querySelector('.video-section').scrollIntoView({ behavior: 'smooth' });
+            });
+    
+            // Redirigir al hacer clic en "Centro de descargas" hacia la sección correspondiente
+            document.getElementById('centro-descargas-btn').addEventListener('click', (event) => {
+                event.preventDefault();
+                document.querySelector('.download-center').scrollIntoView({ behavior: 'smooth' });
+            });
+    
+            // Mostrar alerta al hacer clic en "Clases particulares online"
+            document.getElementById('clases-particulares-btn').addEventListener('click', (event) => {
+                event.preventDefault();
+                alert('Servicio momentáneamente no disponible. Puedes seguirnos en nuestras redes sociales para enterarte cuando vuelva a estar disponible.');
+            });
+        });
+    </script>
+    
+
     <script src="/scripts/header.js"></script>
     <script src="/scripts/buttons-redirection.js"></script>
+    <script src="/scripts/newsletter.js"></script>
+    <script src="/scripts/footer.js"></script>
+    <script src="/scripts/centro-de-descargas.js"></script>
 
 </body>
 </html>

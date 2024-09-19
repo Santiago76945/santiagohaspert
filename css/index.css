@@ -299,7 +299,7 @@ body {
 }
 
 .service-button {
-    background-color: #007bff;
+    background-color: #000000;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -308,6 +308,7 @@ body {
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .service-button:hover {
@@ -324,3 +325,75 @@ body {
     display: none; /* Oculto por defecto */
     z-index: 1000; /* Para que esté por encima de otros elementos */
 }
+
+/* Estilo para la sección de bienvenida */
+.welcome {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.text-content h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botones minimalistas */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.minimal-button {
+    background-color: #000000; /* Color principal */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.minimal-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.minimal-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Media query para pantallas menores de 640px */
+@media (max-width: 640px) {
+    .button-group {
+        flex-direction: column; /* Cambia la disposición de los botones a columna */
+        gap: 10px; /* Ajusta el espacio entre los botones */
+        align-items: center;
+    }
+
+    .minimal-button {
+        width: 80%; /* Asegura que los botones ocupen todo el ancho disponible */
+        max-width: none; /* Elimina el límite de ancho */
+    }
+}
+

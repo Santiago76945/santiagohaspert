@@ -113,7 +113,7 @@ body {
 
 .academic-content .links a {
     text-decoration: none;
-    background-color: #0044cc;
+    background-color: #000000;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -523,3 +523,30 @@ footer p, .footer-content p {
     display: none; /* Oculto por defecto */
     z-index: 1000; /* Para que esté por encima de otros elementos */
 }
+
+/* Estilos específicos para los enlaces de descarga dentro de download-item */
+.download-item a {
+    display: block; /* Cambia a block para asegurar que ocupe todo el ancho disponible */
+    background-color: #fff8f8; /* Fondo claro */
+    color: #000; /* Letras negras */
+    padding: 12px 20px;
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    max-width: 200px; /* Limita el ancho máximo del botón */
+    margin: 10px auto; /* Centra el botón horizontalmente */
+    text-align: center; /* Asegura que el texto dentro del botón esté centrado */
+}
+
+.download-item a:hover {
+    background-color: #f0f0f0; /* Fondo ligeramente más claro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación al hacer hover */
+}
+
+.download-item a:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Resplandor alrededor al hacer focus */
+}
+
