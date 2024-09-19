@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const navMenu = document.querySelector('.nav-menu');
     const closeIcon = document.querySelector('.close-icon');
 
+    // Establecer la fuente del texto
+    navMenu.style.fontSize = '18px';
+
     menuIcon.addEventListener('click', function () {
         navMenu.classList.toggle('active');
         closeIcon.style.display = navMenu.classList.contains('active') ? 'block' : 'none';
