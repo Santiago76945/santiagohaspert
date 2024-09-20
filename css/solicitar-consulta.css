@@ -142,52 +142,31 @@ body {
 .consulta-form {
     padding: 40px 20px;
     background: linear-gradient(to bottom, #c3c3c3, #ffffff); /* Degradado suave de celeste a blanco */
-    width: 100%;
-    margin: 20px auto;
+    max-width: 100%; /* Limitar el ancho máximo al 100% del contenedor padre */
+    margin: 40px auto; /* Centramos el formulario y añadimos margen superior/inferior */
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho del elemento */
+    overflow-x: hidden; /* Evita cualquier desplazamiento horizontal */
 }
 
-.consulta-form h3 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #000000;
-    text-align: center;
-}
-
-.consulta-form p {
-    display: block;
-    margin: 0 auto;
-    color: #555;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    text-align: center;
-    width: 70%;
-}
-
+/* Añadir margen entre los elementos del formulario */
 .consulta-form .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Espaciado vertical entre los campos del formulario */
 }
 
 .consulta-form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: 500;
     color: #333;
     font-size: 0.9em;
 }
 
-.consulta-form .required {
-    color: #d9534f; /* Rojo suave */
-    font-weight: normal;
-    font-size: 0.85em;
-    margin-left: 5px;
-}
-
 .consulta-form input,
 .consulta-form textarea {
-    width: 70%;
+    width: 100%; /* Ajustar el ancho de los campos de texto */
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -195,6 +174,7 @@ body {
     color: #555;
     outline: none;
     transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
 }
 
 .consulta-form input:focus,
@@ -203,6 +183,7 @@ body {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.1);
 }
 
+/* Ajuste del botón */
 #btn-contactar {
     background-color: #007bff;
     color: white;
@@ -216,8 +197,8 @@ body {
     text-align: center;
     transition: background-color 0.3s ease, transform 0.2s;
     display: block;
-    width: 70%;
-    margin: 0 auto; /* esto junto con display block centró el botón */
+    width: calc(100% - 40px); /* Ajuste del ancho del botón para evitar que exceda el contenedor */
+    margin: 0 auto; /* Centro el botón */
 }
 
 #btn-contactar:hover {
