@@ -1,0 +1,451 @@
+/* solicitar-consulta.css */
+
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Estilos del header (reutilizado) */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #222, #111);
+    padding: 20px 40px;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+#header-link-home {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+/* Estilos de la sección hero */
+.hero {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.consult-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.consult-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.consult-link:hover {
+    color: #0056b3;
+}
+
+/* Estilos de las opciones de consulta */
+.consult-option {
+    background: #fff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.consult-option h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.consult-option .price {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.consult-option p,
+.consult-option ul {
+    color: #555;
+    line-height: 1.6;
+}
+
+.consult-option ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.consult-option ul li {
+    margin-bottom: 5px;
+}
+
+.consult-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.consult-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.consult-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.availability-note {
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Estilos del formulario de consulta */
+.consulta-form {
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #c3c3c3, #ffffff); /* Degradado suave de celeste a blanco */
+    max-width: 100%; /* Limitar el ancho máximo al 100% del contenedor padre */
+    margin: 40px auto; /* Centramos el formulario y añadimos margen superior/inferior */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho del elemento */
+    overflow-x: hidden; /* Evita cualquier desplazamiento horizontal */
+}
+
+/* Añadir margen entre los elementos del formulario */
+.consulta-form .form-group {
+    margin-bottom: 25px; /* Espaciado vertical entre los campos del formulario */
+}
+
+.consulta-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.consulta-form input,
+.consulta-form textarea {
+    width: 100%; /* Ajustar el ancho de los campos de texto */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #555;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
+}
+
+.consulta-form input:focus,
+.consulta-form textarea:focus {
+    border-color: #007bff; /* Color de enfoque */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.1);
+}
+
+/* Ajuste del botón */
+#btn-contactar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s;
+    display: block;
+    width: calc(100% - 40px); /* Ajuste del ancho del botón para evitar que exceda el contenedor */
+    margin: 0 auto; /* Centro el botón */
+}
+
+#btn-contactar:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Estilos del footer (reutilizado) */
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0 20px;
+    line-height: 1.5;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #ddd;
+}
+
+/* Sección de consulta presencial */
+#consulta-presencial {
+    background: #c1cbd8; /* Color de fondo */
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#consulta-presencial .consult-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#consulta-presencial img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Sección de consulta online */
+#consulta-online {
+    background: #d9c6a5; /* Color de fondo */
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#consulta-online img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.consult-option h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.consult-option .price {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.consult-option p,
+.consult-option ul {
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.consult-option ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.consult-option ul li {
+    margin-bottom: 5px;
+}
+
+/* Botones de consulta */
+.consult-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    max-width: 150px;
+}
+
+.consult-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.consult-button:hover:not(:disabled) {
+    background-color: #111;
+}
+
+.availability-note {
+    font-size: 0.9em;
+    color: #d9534f; /* Color rojo suave para la disponibilidad */
+    margin-top: 5px;
+}
+
+
+@media (max-width: 690px) {
+    .consult-option {
+        flex-direction: column; /* Cambia la dirección del contenido a columna */
+        text-align: center; /* Centra todo el texto dentro del contenedor */
+    }
+
+    .consult-option img {
+        max-width: 100%; /* Asegura que la imagen ocupe el ancho disponible */
+        margin-bottom: 20px; /* Añade un espacio debajo de la imagen */
+    }
+
+    .consult-content {
+        text-align: center; /* Centra el texto dentro del bloque de contenido */
+        margin: 0 auto; /* Centra el bloque de texto */
+    }
+
+    .consult-option h3, .consult-option p {
+        text-align: center; /* Asegura que los títulos y párrafos estén centrados */
+    }
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    justify-content: flex-start; /* Empieza desde la parte superior */
+    padding: 50px 20px; /* Espaciado para que los elementos no queden pegados a los bordes */
+    z-index: 1000;
+}
+
+/* Muestra el menú cuando tiene la clase 'active' */
+.nav-menu.active {
+    display: flex;
+}
+
+/* Ajusta los estilos de los elementos de la lista */
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav-menu li {
+    margin: 20px 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #bebebe; /* Asegura que los enlaces tengan un color visible */
+    font-size: 18px; /* Tamaño de fuente */
+    padding: 10px 0;
+    display: block;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.nav-menu a:hover {
+    color: #fff;
+}
+
+/* Estilos del icono del menú */
+.menu-icon {
+    display: block;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+}
+
