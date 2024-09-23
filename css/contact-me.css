@@ -1,4 +1,4 @@
-/* solicitar-consulta.css */
+/* contact-me.css */
 
 /* Estilos globales */
 body {
@@ -447,5 +447,90 @@ body {
     font-size: 1.5em;
     color: #fff;
     cursor: pointer;
+}
+
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f5f5f5; /* Color de fondo más suave */
+}
+
+/* Contacto - Imagen de Contacto */
+.contact-me .contact-image {
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto 20px; /* Centrar imagen y añadir margen inferior */
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Sección Contacto */
+.contact-me {
+    background-color: #fff; /* Fondo blanco para contraste */
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-me h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.contact-me p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-me ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-me li {
+    margin-bottom: 10px;
+}
+
+/* Redes Sociales */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 15px;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0056b3;
+}
+
+/* Ajustes Responsive */
+@media (max-width: 768px) {
+    .contact-me {
+        padding: 20px;
+    }
+
+    .contact-me h2 {
+        font-size: 1.8em;
+    }
+
+    .social-icons a {
+        font-size: 1.2em;
+        margin: 0 10px;
+    }
 }
 

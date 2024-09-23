@@ -30,22 +30,22 @@
 
     <section class="contact-me">
         <div class="contact-container">
-            <h2>Contacto</h2>
-            <p>Si deseas ponerte en contacto conmigo para consultas jurídicas, colaboraciones académicas o cualquier otra 
-            consulta, no dudes en escribirme. Estoy aquí para ayudarte y responder a tus inquietudes.</p>
-            
-            <h3>Información de contacto</h3>
+            <img src="../images/santiago-contact.png" alt="Imagen de contacto" class="contact-image">
+            <h2 id="contact-title">¿Necesitas contactarme?</h2>
+            <p id="contact-description">Si deseas ponerte en contacto conmigo, puedes hacerlo a traves de los siguientes medios:</p>
+
+            <h3 id="contact-info-title">Información de contacto</h3>
             <ul>
-                <li><strong>Email:</strong> <a href="mailto:tu-email@ejemplo.com">tu-email@ejemplo.com</a></li>
-                <li><strong>Teléfono:</strong> <a href="tel:+1234567890">+1 234 567 890</a></li>
+                <li><strong>Email:</strong> <a href="mailto:santiago_76945@yahoo.es">santiago_76945@yahoo.es</a></li>
+                <li><strong>Teléfono:</strong> <a href="tel:+4915123551945">+49 1512 3551945</a></li>
                 <li><strong>WhatsApp:</strong> <a href="https://wa.me/tu-numero-whatsapp" target="_blank">Enviar mensaje</a></li>
             </ul>
-            
-            <h3>Redes Sociales</h3>
+
+            <h3 id="social-title">Redes Sociales</h3>
             <div class="social-icons">
-                <a href="https://www.instagram.com/tu-cuenta-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/tu-canal-youtube" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://wa.me/tu-numero-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/santiagohaspert" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/santiagohaspert" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://wa.me/4915123551945" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </section>
@@ -53,14 +53,14 @@
     <footer class="footer">
         <div class="footer-content">
             <h3>Dr. Santiago Haspert Piaggio</h3>
-            <p>Paraná y Eva Perón S/N<br>Santa Elena, Entre Ríos.</p>
+            <p id="footer-address">Paraná y Eva Perón S/N<br>Santa Elena, Entre Ríos.</p>
             <nav class="footer-nav">
                 <ul>
-                    <li><a href="/pages/solicitar-consulta.html">Solicitar consulta jurídica</a></li>
-                    <li><a href="/pages/contenido-academico.html">Contenido académico para estudiantes de Abogacía</a></li>
-                    <li><a href="/pages/tienda.html">Tienda</a></li>
-                    <li><a href="/pages/about-me.html">Acerca de mí</a></li>
-                    <li><a href="/pages/contact-me.html">Contacto</a></li>
+                    <li><a href="/pages/solicitar-consulta.html" id="footer-consulta-nav">Solicitar consulta jurídica</a></li>
+                    <li><a href="/pages/contenido-academico.html" id="footer-academico-nav">Contenido académico para estudiantes de Abogacía</a></li>
+                    <li><a href="/pages/tienda.html" id="footer-tienda-nav">Tienda</a></li>
+                    <li><a href="/pages/about-me.html" id="footer-about-nav">Acerca de mí</a></li>
+                    <li><a href="/pages/contact-me.html" id="footer-contact-nav">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -68,6 +68,48 @@
 
     <script src="/scripts/buttons-redirection.js"></script>
     <script src="/scripts/header.js"></script>
+
+    <script>
+        // Texto en inglés
+        const englishContent = {
+            contactTitle: "Need to contact me?",
+            contactDescription: "If you wish to get in touch with me, you can do so through the following means:",
+            contactInfoTitle: "Contact Information",
+            socialTitle: "Social Media",
+            footerAddress: "Paraná and Eva Perón S/N<br>Santa Elena, Entre Ríos.",
+            consultaNav: "Request Legal Consultation",
+            academicoNav: "Academic Content for Law Students",
+            tiendaNav: "Store",
+            aboutNav: "About Me",
+            contactNav: "Contact",
+        };
+
+        // Detecta el idioma del dispositivo
+        const userLang = navigator.language || navigator.userLanguage;
+
+        if (!userLang.startsWith('es')) {
+            // Si el idioma no es español, cambiar los textos al inglés
+            document.getElementById('contact-title').innerText = englishContent.contactTitle;
+            document.getElementById('contact-description').innerText = englishContent.contactDescription;
+            document.getElementById('contact-info-title').innerText = englishContent.contactInfoTitle;
+            document.getElementById('social-title').innerText = englishContent.socialTitle;
+            document.getElementById('footer-address').innerHTML = englishContent.footerAddress;
+
+            // Navegación
+            document.getElementById('consulta-nav').innerText = englishContent.consultaNav;
+            document.getElementById('academico-nav').innerText = englishContent.academicoNav;
+            document.getElementById('tienda-nav').innerText = englishContent.tiendaNav;
+            document.getElementById('about-nav').innerText = englishContent.aboutNav;
+            document.getElementById('contact-nav').innerText = englishContent.contactNav;
+
+            // Footer Navigation
+            document.getElementById('footer-consulta-nav').innerText = englishContent.consultaNav;
+            document.getElementById('footer-academico-nav').innerText = englishContent.academicoNav;
+            document.getElementById('footer-tienda-nav').innerText = englishContent.tiendaNav;
+            document.getElementById('footer-about-nav').innerText = englishContent.aboutNav;
+            document.getElementById('footer-contact-nav').innerText = englishContent.contactNav;
+        }
+    </script>
 </body>
 
 </html>
