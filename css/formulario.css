@@ -1,0 +1,246 @@
+/* formulario.css */
+
+/* Variables de diseño */
+:root {
+    --fc-color-bg: #f9f9f9;
+    --fc-color-card: #ffffff;
+    --fc-color-border: #ddd;
+    --fc-color-text: #222;
+    --fc-color-muted: #555;
+    --fc-color-primary: #000;
+    --fc-color-primary-light: #333;
+    --fc-radius: 0.5rem;
+    --fc-spacing: 1rem;
+    --fc-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --fc-transition: all 0.2s ease-in-out;
+    --fc-font: "Arial", sans-serif;
+}
+
+/* Reset limitado al formulario */
+.fc-container,
+.fc-container * {
+    box-sizing: border-box;
+    font-family: var(--fc-font);
+}
+
+/* Contenedor principal centrado */
+.fc-container {
+    background: var(--fc-color-bg);
+    padding: calc(var(--fc-spacing) * 2);
+    max-width: 32rem;
+    margin: 2rem auto;
+}
+
+/* Carta exterior */
+.fc-card {
+    background: var(--fc-color-card);
+    border: 1px solid var(--fc-color-border);
+    border-radius: var(--fc-radius);
+    box-shadow: var(--fc-shadow);
+    overflow: hidden;
+}
+
+/* Carta interior para cada paso */
+.fc-step {
+    display: none;
+    padding: var(--fc-spacing);
+}
+
+.fc-step--active {
+    display: block;
+}
+
+/* Cabecera de cada carta */
+.fc-card__header {
+    background: var(--fc-color-primary);
+    color: #fff;
+    padding: var(--fc-spacing);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Cuerpo de cada carta */
+.fc-card__body {
+    padding: var(--fc-spacing);
+}
+
+/* Etiquetas y campos */
+.fc-field {
+    margin-bottom: var(--fc-spacing);
+}
+
+.fc-label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--fc-color-text);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.fc-input,
+.fc-textarea,
+.fc-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--fc-color-border);
+    border-radius: var(--fc-radius);
+    font-size: 1rem;
+    color: var(--fc-color-text);
+    background: var(--fc-color-card);
+    transition: var(--fc-transition);
+}
+
+.fc-input:focus,
+.fc-textarea:focus,
+.fc-select:focus {
+    outline: none;
+    border-color: var(--fc-color-primary);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.fc-textarea {
+    min-height: 6rem;
+    resize: vertical;
+}
+
+/* Grupo de botones */
+.fc-button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: var(--fc-spacing);
+}
+
+/* Botones */
+.fc-button {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--fc-radius);
+    cursor: pointer;
+    transition: var(--fc-transition);
+}
+
+.fc-button--primary {
+    background: var(--fc-color-primary);
+    color: #fff;
+}
+
+.fc-button--primary:hover {
+    background: var(--fc-color-primary-light);
+}
+
+.fc-button--secondary {
+    background: var(--fc-color-card);
+    color: var(--fc-color-text);
+    border: 1px solid var(--fc-color-border);
+}
+
+.fc-button--secondary:hover {
+    background: var(--fc-color-bg);
+}
+
+/* Indicador de progreso */
+.fc-progress {
+    display: flex;
+    margin-bottom: var(--fc-spacing);
+    padding: 0 var(--fc-spacing);
+    list-style: none;
+    counter-reset: step;
+}
+
+.fc-progress__step {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--fc-color-muted);
+}
+
+.fc-progress__step::before {
+    counter-increment: step;
+    content: counter(step);
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    border: 1px solid var(--fc-color-border);
+    border-radius: 50%;
+    display: inline-block;
+    background: var(--fc-color-card);
+    margin-bottom: 0.25rem;
+}
+
+.fc-progress__step--active,
+.fc-progress__step--complete {
+    color: var(--fc-color-primary);
+}
+
+.fc-progress__step--complete::before {
+    content: "✓";
+    background: var(--fc-color-primary);
+    color: #fff;
+    border-color: var(--fc-color-primary);
+}
+
+.fc-progress__step+.fc-progress__step::after {
+    content: "";
+    position: absolute;
+    top: 0.7rem;
+    /* medio de la burbuja */
+    left: -50%;
+    width: 100%;
+    height: 2px;
+    background: var(--fc-color-border);
+    z-index: -1;
+}
+
+.fc-progress__step--complete+.fc-progress__step::after {
+    background: var(--fc-color-primary);
+}
+
+/* Texto de agradecimiento (último paso) */
+.fc-thanks {
+    text-align: center;
+    padding: calc(var(--fc-spacing) * 2);
+}
+
+.fc-thanks__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--fc-color-primary);
+}
+
+.fc-thanks__text {
+    color: var(--fc-color-text);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.fc-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+.fc-option input[type="radio"] {
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+/* Centrar título y texto de la intro */
+.fc-intro {
+    text-align: center;
+}
+
+.fc-intro__title,
+.fc-intro__text {
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}

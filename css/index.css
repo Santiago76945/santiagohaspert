@@ -121,7 +121,8 @@ body {
     border-radius: 8px;
 }
 
-.service-item h3, .service-item p {
+.service-item h3,
+.service-item p {
     text-align: center;
 }
 
@@ -252,12 +253,17 @@ body {
 /* CSS para la 'x' de cerrar */
 .close-icon {
     position: fixed;
-    top: 10px; /* Ajusta según tus necesidades */
-    left: 10px; /* Ajusta según tus necesidades */
-    font-size: 30px; /* Tamaño de la 'x' */
+    top: 10px;
+    /* Ajusta según tus necesidades */
+    left: 10px;
+    /* Ajusta según tus necesidades */
+    font-size: 30px;
+    /* Tamaño de la 'x' */
     cursor: pointer;
-    display: none; /* Oculto por defecto */
-    z-index: 1000; /* Para que esté por encima de otros elementos */
+    display: none;
+    /* Oculto por defecto */
+    z-index: 1000;
+    /* Para que esté por encima de otros elementos */
 }
 
 /* Estilo para la sección de bienvenida */
@@ -297,7 +303,8 @@ body {
 }
 
 .minimal-button {
-    background-color: #000000; /* Color principal */
+    background-color: #000000;
+    /* Color principal */
     color: white;
     border: none;
     padding: 12px 20px;
@@ -320,20 +327,25 @@ body {
 /* Media query para pantallas menores de 640px */
 @media (max-width: 640px) {
     .button-group {
-        flex-direction: column; /* Cambia la disposición de los botones a columna */
-        gap: 10px; /* Ajusta el espacio entre los botones */
+        flex-direction: column;
+        /* Cambia la disposición de los botones a columna */
+        gap: 10px;
+        /* Ajusta el espacio entre los botones */
         align-items: center;
     }
 
     .minimal-button {
-        width: 80%; /* Asegura que los botones ocupen todo el ancho disponible */
-        max-width: none; /* Elimina el límite de ancho */
+        width: 80%;
+        /* Asegura que los botones ocupen todo el ancho disponible */
+        max-width: none;
+        /* Elimina el límite de ancho */
     }
 }
 
 /* Navigation Menu */
 .nav-menu {
-    display: none; /* Inicialmente oculto */
+    display: none;
+    /* Inicialmente oculto */
     position: fixed;
     top: 0;
     left: 0;
@@ -341,9 +353,12 @@ body {
     height: 100%;
     background: #222;
     flex-direction: column;
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
-    justify-content: flex-start; /* Empieza desde la parte superior */
-    padding: 50px 20px; /* Espaciado para que los elementos no queden pegados a los bordes */
+    align-items: flex-start;
+    /* Alinea el contenido a la izquierda */
+    justify-content: flex-start;
+    /* Empieza desde la parte superior */
+    padding: 50px 20px;
+    /* Espaciado para que los elementos no queden pegados a los bordes */
     z-index: 1000;
 }
 
@@ -366,11 +381,14 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: #bebebe; /* Asegura que los enlaces tengan un color visible */
-    font-size: 18px; /* Tamaño de fuente */
+    color: #bebebe;
+    /* Asegura que los enlaces tengan un color visible */
+    font-size: 18px;
+    /* Tamaño de fuente */
     padding: 10px 0;
     display: block;
-    text-align: left; /* Alinea el texto a la izquierda */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
 }
 
 .nav-menu a:hover {
@@ -385,9 +403,244 @@ body {
     cursor: pointer;
 }
 
+/* 1. Contenedor de cards centrado con Flexbox */
+.services .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* centra las cards */
+    gap: 2rem;
+    /* separación entre cards */
+    padding: 2rem 0;
+}
 
+/* 2. Cada card con ancho máximo fijo */
+.services .service-item {
+    flex: 0 1 300px;
+    /* ancho base 300px, se adapta */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
+/* 3. Wrapper cuadrado para la imagen */
+.services .service-item__image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* fuerza proporción cuadrada */
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
 
+/* 4. Imagen dentro del wrapper */
+.services .service-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* recorta lo que sobresalga */
+    display: block;
+}
 
+/* 5. Ajuste de texto y botón */
+.services .service-item h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
 
+.services .service-item p {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
 
+/* Eliminar subrayado de enlaces con clase minimal-button */
+a.minimal-button {
+    text-decoration: none;
+}
+
+/* Asegurar que tampoco aparezca al hacer hover o focus */
+a.minimal-button:hover,
+a.minimal-button:focus {
+    text-decoration: none;
+}
+
+/* Quita negrita de párrafos */
+p {
+    font-weight: normal;
+}
+
+/* Form container */
+.form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels y campos */
+.contact-form label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Textarea */
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Botón de envío */
+.contact-form button {
+    align-self: center;
+    max-width: 200px;
+}
+
+/* ==============================
+   Sección “Nuestras sedes”
+   ============================== */
+.sedes-section {
+    /* Fondo blanco puro para contraste */
+    background-color: #2e2e2e;
+    /* Azul muy oscuro con aire profesional */
+    color: #f0f0f0;
+    /* Texto claro para mejor contraste */
+    border: none;
+    /* Opcional: sin bordes */
+    padding: 3rem 1rem;
+    /* Un ligero borde superior e inferior para enmarcar */
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sedes-section .welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sedes-section .button-group .minimal-button {
+    /* Botones un poco más estrechos y uniformes */
+    min-width: 140px;
+    padding: 0.75rem 1.5rem;
+}
+
+.sedes-section .button-group .minimal-button:hover {
+    /* Match hover del resto del sitio */
+    background-color: #646cff;
+}
+
+/* =========================
+   Unificar estilo de títulos
+   ========================= */
+.services h2,
+.sedes-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    /* opcional, para igualdad visual */
+}
+
+/* ===== Hero-buttons: wrapping responsivo sin forzar ancho completo ===== */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 580px) {
+    .hero-buttons .button {
+        /* Dos botones por fila, con su ancho natural */
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+}
+
+/* === Hero responsive (welcome): full-bleed < 1000px, centrado = 1000px === */
+.welcome .hero-media {
+    width: 100vw;
+    /* ocupa todo el viewport */
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    display: block;
+    overflow: hidden;
+    border-radius: 0;
+    /* opcional, para borde a borde real */
+}
+
+/* full-bleed < 1000px */
+.welcome .hero-media {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    display: block;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+/* >= 1000px: tope 1000px y centrado */
+@media (min-width: 1000px) {
+    .welcome .hero-media {
+        width: 1000px;
+        /* tope */
+        max-width: 1000px;
+        margin-left: 0;
+        /* reset de los negativos */
+        margin-right: 0;
+        align-self: center;
+        /* centrado dentro del contenedor flex */
+    }
+}
+
+/* === FIX HERO: full-bleed en móviles, centrada y 1000px máx en grandes === */
+html, body { overflow-x: hidden; }         /* evita scroll horizontal global */
+
+/* La sección no debe tener padding lateral para permitir full-bleed */
+.welcome { padding: 40px 0; }
+
+/* Permite que el contenedor no limite el ancho de la hero */
+.welcome .welcome-content { max-width: none; }
+
+/* Hero: por defecto ocupa 100% del ancho del viewport de la sección */
+.welcome .hero-media {
+  display: block;
+  width: 100%;
+  max-width: 1000px;        /* tope en pantallas grandes */
+  margin: 0 auto 20px;      /* centrada cuando no es full-bleed */
+  overflow: hidden;
+}
+
+/* Imagen dentro de la hero */
+.welcome .hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* El contenido de texto vuelve a un ancho cómodo y con “padding” lateral */
+.welcome .text-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Opcional: si querés que en XS/SM sea 100% viewport real sin padding */
+@media (max-width: 999px) {
+  .welcome .hero-media { max-width: none; } /* full-bleed real en móviles */
+}

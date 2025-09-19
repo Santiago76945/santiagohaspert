@@ -1,84 +1,155 @@
-<!-- solicitar-consulta.html -->
+<!-- pages/solicitar-consulta.html -->
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicitar Consulta Jurídica - Dr. Santiago Haspert Piaggio</title>
-    <link rel="stylesheet" href="/css/solicitar-consulta.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solicitar Consulta Jurídica</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/solicitar-consulta.css">
+    <link rel="stylesheet" href="/css/formulario.css">
+    <link rel="stylesheet" href="/css/floating-contact.css">
 </head>
+
 <body>
+
     <header class="header">
-        <a href="/index.html" id="header-link-home">
+        <a href="/index.html" id="header-home">
             <h1>Dr. Santiago Haspert Piaggio</h1>
         </a>
-        <div class="menu-icon">☰</div> <!-- Ícono del menú hamburguesa -->
+        <div class="menu-icon">☰</div>
         <nav class="nav-menu">
             <ul>
                 <div class="close-icon">&times;</div>
-                <li><a href="#" id="link-consulta">Solicitar consulta jurídica</a></li>
-                <li><a href="#" id="link-academico">Contenido académico para estudiantes</a></li>
-                <li><a href="#" id="link-tienda">Tienda</a></li>
-                <li><a href="#" id="link-about">Acerca de mí</a></li>
+                <li><a href="#" id="consulta-button">Solicitar consulta jurídica</a></li>
+                <li><a href="#" id="academico-button">Contenido académico para estudiantes</a></li>
+                <li><a href="#" id="tienda-button">Tienda</a></li>
+                <li><a href="/pages/servicios.html" id="servicios-nav">Nuestros servicios</a></li>
+                <li><a href="#" id="about-button">Acerca de mí</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero hero--light">
-        <h2>Solicitar consulta jurídica</h2>
-        <p>Encuentre la solución jurídica más conveniente para usted: Dispone de atención de calidad tanto en nuestro servicio presencial como en línea. Sin importar su preferencia, ofrecemos soluciones legales a medida y nos comprometemos a brindar un servicio de excelencia.</p>
-        <div class="consult-options">
-            <a href="#consulta-presencial" class="consult-link" id="link-presencial">Consulta presencial →</a>
-            <a href="#consulta-online" class="consult-link" id="link-online">Consulta online →</a>
-        </div>
-    </section>
+    <section class="fc-container">
+        <div class="fc-card">
 
-    <section id="consulta-presencial" class="consult-option">
-        <div class="consult-content">
-            <h3>Consulta Legal Presencial</h3>
-            <p>En nuestro estudio jurídico, ubicado en Paraná y Eva Perón, Santa Elena, Entre Ríos, proporcionamos servicios de consulta jurídica presencial de calidad. Nuestro experimentado equipo de abogados está comprometido en brindar asesoramiento legal especializado en una amplia gama de áreas legales.</p>
-            <button class="consult-button" disabled>NO DISPONIBLE</button>
-            <p class="availability-note">Disponible a fines de 2024</p>
-        </div>
-        <img src="/images/consulta-presencial.png" alt="Estudio Jurídico">
-    </section>
-    
-    <section id="consulta-online" class="consult-option">
-        <img src="/images/consulta-online.png" alt="Consulta Online">
-        <div class="consult-content">
-            <h3>Consulta Legal Online</h3>
-            <p>A través de una videollamada de Google Meet, nuestro equipo está disponible para brindar asesoramiento personalizado en diversas áreas del derecho. Ya sea que necesite orientación en contratos, problemas laborales o distintas disputas legales, estamos aquí para ayudarlo.</p>
-            <button class="consult-button" id="btn-solicitar-online">SOLICITAR</button>
-        </div>
-    </section>
+            <!-- Título y descripción -->
+            <div class="fc-intro">
+                <h2 class="fc-intro__title">Agendar consulta jurídica</h2>
+                <p class="fc-intro__text">
+                    Complete los siguientes pasos para coordinar su consulta. Puede elegir entre
+                    <strong>videollamada</strong> o <strong>presencial en Córdoba (Nueva Córdoba)</strong>.
+                </p>
+            </div>
 
-    <section class="consulta-form">
-        <h3>¿TIENE ALGUNA DUDA?</h3>
-        <p>Si no está seguro sobre qué tipo de modalidad de consulta se ajusta mejor a sus necesidades, o si tiene alguna otra pregunta antes de solicitar dicha consulta, no dude en ponerse en contacto con nosotros a través del siguiente formulario. Nuestro equipo se pondrá en contacto con usted a la mayor brevedad posible.</p>
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="form-name">Nombre y Apellido <span class="required">(required)</span></label>
-                <input type="text" id="form-name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="form-email">Correo electrónico <span class="required">(required)</span></label>
-                <input type="email" id="form-email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="form-message">Mensaje</label>
-                <textarea id="form-message" name="message" rows="5"></textarea>
-            </div>
-            <button type="submit" class="contact-button" id="btn-contactar">CONTACTAR</button>
-        </form>
+            <!-- Barra de progreso -->
+            <ul class="fc-progress">
+                <li class="fc-progress__step fc-progress__step--active">Modalidad</li>
+                <li class="fc-progress__step">Datos</li>
+                <li class="fc-progress__step">Descripción</li>
+                <li class="fc-progress__step">Listo</li>
+            </ul>
+
+            <!-- Formulario multipaso -->
+            <form id="formulario" action="https://formspree.io/f/xrbqdlpa" method="POST" novalidate>
+
+                <!-- Paso 1 -->
+                <div class="fc-step fc-step--active" data-step="1">
+                    <div class="fc-card__header">
+                        Solo un par de pasos para que sus problemas jurídicos dejen de agobiarle
+                    </div>
+                    <div class="fc-card__body">
+                        <div class="fc-field">
+                            <label class="fc-label">¿Cómo prefiere su consulta?</label>
+
+                            <div class="fc-option">
+                                <input type="radio" id="modalidad-cordoba" name="modalidad"
+                                       value="Presencial - Córdoba (Nueva Córdoba)" required>
+                                <label for="modalidad-cordoba">
+                                    Presencial – <strong>Córdoba (Nueva Córdoba)</strong>
+                                </label>
+                            </div>
+
+                            <div class="fc-option">
+                                <input type="radio" id="modalidad-videollamada" name="modalidad"
+                                       value="Videollamada (Google Meet)" required>
+                                <label for="modalidad-videollamada">
+                                    Videollamada (Google Meet)
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="fc-button-group">
+                            <button type="button" class="fc-button fc-button--primary" id="next1">Siguiente</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="fc-step" data-step="2">
+                    <div class="fc-card__header">Un par de datos y estamos listos</div>
+                    <div class="fc-card__body">
+                        <div class="fc-field">
+                            <label class="fc-label" for="nombre">Nombre y Apellido</label>
+                            <input type="text" id="nombre" name="nombre" class="fc-input" required>
+                        </div>
+                        <div class="fc-field">
+                            <label class="fc-label" for="telefono">Teléfono (WhatsApp)</label>
+                            <input type="tel" id="telefono" name="telefono" class="fc-input" required>
+                        </div>
+                        <div class="fc-field">
+                            <label class="fc-label" for="referencia">¿Cómo se enteró de este servicio?</label>
+                            <input type="text" id="referencia" name="referencia" class="fc-input" required>
+                        </div>
+                        <div class="fc-field">
+                            <label class="fc-label" for="email">Email (opcional)</label>
+                            <input type="email" id="email" name="_replyto" class="fc-input">
+                        </div>
+                        <div class="fc-button-group">
+                            <button type="button" class="fc-button fc-button--secondary" id="prev2">Anterior</button>
+                            <button type="button" class="fc-button fc-button--primary" id="next2">Siguiente</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="fc-step" data-step="3">
+                    <div class="fc-card__header">Casi terminamos, cuéntenos sobre su caso</div>
+                    <div class="fc-card__body">
+                        <div class="fc-field">
+                            <label class="fc-label" for="descripcion">
+                                Descripción breve del caso (para evaluar si se encuentra dentro de nuestra área de trabajo).
+                            </label>
+                            <textarea id="descripcion" name="descripcion" class="fc-textarea" required></textarea>
+                        </div>
+                        <div class="fc-button-group">
+                            <button type="button" class="fc-button fc-button--secondary" id="prev3">Anterior</button>
+                            <button type="submit" class="fc-button fc-button--primary">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paso 4: Gracias -->
+                <div class="fc-step" data-step="4">
+                    <div class="fc-thanks">
+                        <div class="fc-thanks__title">¡Gracias!</div>
+                        <div class="fc-thanks__text">
+                            Nos pondremos en contacto a la brevedad para coordinar la fecha y hora de su consulta.
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
     </section>
 
     <footer class="footer">
         <div class="footer-content">
             <h3>Dr. Santiago Haspert Piaggio</h3>
-            <p>Paraná y Eva Perón S/N<br>Santa Elena, Entre Ríos.</p>
+            <p>Córdoba – <strong>Nueva Córdoba</strong>, Argentina.</p>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-youtube"></i></a>
@@ -95,10 +166,11 @@
         </div>
     </footer>
 
-    <script src="/scripts/buttons-redirection.js"></script>
-    <script src="/scripts/header.js"></script>
     <script src="/scripts/solicitar-consulta.js"></script>
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/buttons-redirection.js"></script>
     <script src="/scripts/footer.js"></script>
+    <script src="/scripts/floating-contact.js"></script>
 </body>
-</html>
 
+</html>

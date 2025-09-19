@@ -7,112 +7,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Santiago Haspert Piaggio</title>
+    <title>Dr. Santiago Haspert Piaggio – Abogado en Córdoba</title>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/floating-contact.css">
 </head>
 
 <body>
+    <!-- ===== HEADER ===== -->
     <header class="header">
         <a href="/index.html" id="header-home">
             <h1>Dr. Santiago Haspert Piaggio</h1>
         </a>
-        <div class="menu-icon">☰</div> <!-- Ícono del menú hamburguesa -->
+        <div class="menu-icon">☰</div>
         <nav class="nav-menu">
             <ul>
                 <div class="close-icon">&times;</div>
-                <!-- Cambié los IDs en el menú de navegación -->
-                <li><a href="#" id="consulta-nav">Solicitar consulta jurídica</a></li>
+                <li><a href="/pages/solicitar-consulta.html" id="consulta-nav">Solicitar consulta jurídica</a></li>
+                <li><a href="/pages/contact-form.html" id="contact-form-nav">Contacto</a></li>
                 <li><a href="#" id="academico-nav">Contenido académico para estudiantes</a></li>
                 <li><a href="#" id="tienda-nav">Tienda</a></li>
+                <li><a href="/pages/servicios.html" id="servicios-nav">Nuestros servicios</a></li>
                 <li><a href="#" id="about-nav">Acerca de mí</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- <section class="hero">
-        <div class="hero-text">
-            <h2>ASESORÍA LEGAL DE CALIDAD Y A MEDIDA</h2>
-        </div>
-    </section> -->
-
+    <!-- ===== WELCOME ===== -->
     <section class="welcome">
         <div class="welcome-content">
-            <img src="/images/logo.png" alt="Logo SH" class="logo">
+
+            <!-- HERO responsive -->
+            <picture class="hero-media">
+                <!-- Notebooks/monitores anchos: panorámica -->
+                <source srcset="/images/hero-panorama.png" media="(min-aspect-ratio: 16/9)" />
+                <!-- Teléfonos en vertical: cuadrada -->
+                <source srcset="/images/hero-cuadrada.png" media="(orientation: portrait)" />
+                <!-- Intermedias (fallback): rectangular -->
+                <img src="/images/hero-rectangular.png" alt="Estudio jurídico en Córdoba (Nueva Córdoba)">
+            </picture>
+
             <div class="text-content">
                 <h3>BIENVENIDO A SANTIAGOHASPERT.COM</h3>
                 <p>
-                    ¡Bienvenido! Aquí encontrará asesoría legal personalizada y recursos educativos para estudiantes de derecho. No dude en contactarnos para cualquier consulta. ¡Gracias por visitarnos!
+                    Somos un equipo de abogados con atención centralizada en <strong>Córdoba Capital</strong>.
+                    Con más de 5 años de trayectoria, nuestra especialidad abarca derecho civil, comercial,
+                    laboral y tributario, entre otros. Brindamos <strong>consultas presenciales en Córdoba</strong> y
+                    <strong>atención remota por videollamada</strong>.
+                    Nos comprometemos con la excelencia, la atención personalizada y resultados comprobables.
+                    También encontrarás recursos académicos para estudiantes de derecho. ¡Gracias por visitarnos!
                 </p>
                 <div class="button-group">
-                    <button id="academic-content" class="minimal-button">Contenido académico para estudiantes</button>
                     <button id="book-consult" class="minimal-button">Sacar turno para consulta</button>
+                    <button id="services-button" class="minimal-button">Nuestros servicios jurídicos</button>
+                    <button id="academic-content" class="minimal-button">Contenido académico</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Servicios -->
+
+    <!-- ===== Sección de Servicios ===== -->
     <section class="services">
         <h2>NUESTROS SERVICIOS</h2>
         <div class="services-grid">
-            <!-- Servicio 1: Asesoramiento Legal -->
+            <!-- Servicio 1 -->
             <div class="service-item">
                 <img src="/images/asesoramiento-legal.png" alt="Asesoramiento Legal">
                 <h3>Asesoramiento Legal Personalizado</h3>
                 <p>
-                    Ofrecemos asesoramiento legal en diversas áreas como derecho civil, jubilaciones y pensiones,
-                    derecho laboral, derecho tributario y más. Nuestro equipo de profesionales está comprometido a
-                    resolver tus inquietudes y brindarte soluciones legales efectivas.
+                    Ofrecemos asesoramiento en derecho civil, jubilaciones y pensiones, laboral, tributario y más.
+                    Nuestro equipo está comprometido a resolver tus inquietudes con soluciones efectivas.
                 </p>
-                <!-- Mantuve el ID original aquí -->
-                <a href="/pages/solicitar-consulta.html" class="service-button" id="consulta-button">Solicitar consulta
-                    jurídica</a>
+                <a href="/pages/solicitar-consulta.html" class="service-button" id="consulta-button">
+                    Solicitar consulta jurídica
+                </a>
             </div>
-
-            <!-- Servicio 2: Material Académico -->
+            <!-- Servicio 2 -->
             <div class="service-item">
-                <img src="/images/material-academico.png" alt="Material Académico para Estudiantes de Derecho">
-                <h3>Material Académico para Estudiantes de Derecho</h3>
+                <img src="/images/material-academico.png" alt="Material Académico">
+                <h3>Material Académico para Estudiantes</h3>
                 <p>
-                    Creemos en compartir el conocimiento. Accede a resúmenes, podcasts y otros recursos de estudio
-                    completamente gratuitos para apoyar tu formación en la carrera de abogacía.
+                    Accede a resúmenes, podcasts y recursos gratuitos para apoyar tu formación en abogacía.
                 </p>
-                <!-- Mantuve el ID original aquí -->
-                <a href="/pages/contenido-academico.html" class="service-button" id="academico-button">Ver material
-                    académico</a>
+                <a href="/pages/contenido-academico.html" class="service-button" id="academico-button">
+                    Ver material académico
+                </a>
             </div>
-
-            <!-- Servicio 3: Clases Particulares -->
+            <!-- Servicio 3 -->
             <div class="service-item">
-                <img src="/images/clases-particulares.png" alt="Clases Particulares para Estudiantes de Derecho">
-                <h3>Clases Particulares Personalizadas</h3>
+                <img src="/images/servicios.PNG" alt="Nuestros Servicios Jurídicos">
+                <h3>Nuestros Servicios Jurídicos</h3>
                 <p>
-                    Obtén clases particulares de derecho adaptadas a tus necesidades desde cualquier lugar del país.
-                    Diseñamos una propuesta educativa a tu medida para ayudarte a alcanzar tus objetivos académicos y
-                    profesionales.
+                    Expertise en derecho civil, laboral y comercial con un equipo multidisciplinario y
+                    resultados comprobables.
                 </p>
-                <!-- Mantuve el ID original aquí -->
-                <button class="service-button" id="clases-button">Solicitar clases particulares</button>
+                <a href="/pages/servicios.html" class="service-button" id="services-button-secondary">
+                    Conozca nuestros servicios
+                </a>
             </div>
-
         </div>
     </section>
 
-    <!-- Sección de suscripción al newsletter -->
+    <!-- ===== NEWSLETTER ===== -->
     <section class="newsletter">
-        <h2>¡Suscríbete a nuestro newsletter, recibe códigos de descuento y entérate de todas las novedades!</h2>
+        <h2>¡Suscríbete a nuestro newsletter y enterate de las novedades!</h2>
         <div class="newsletter-form">
-            <input type="email" placeholder="Escribe tu correo electrónico...">
+            <input type="email" placeholder="Escribe tu correo electrónico..." required>
             <button class="subscribe-button">SUSCRIBIRSE</button>
         </div>
     </section>
 
-    <!-- Pie de página -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="footer-content">
             <h3>Dr. Santiago Haspert Piaggio</h3>
-            <p>Paraná y Eva Perón S/N<br>Santa Elena, Entre Ríos.</p>
+            <p>Calle Chacabuco 150 – Oficinas 11 y 12 “B”<br>Córdoba Capital, Argentina.</p>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-youtube"></i></a>
@@ -121,8 +131,8 @@
             <nav class="footer-nav">
                 <ul>
                     <li><a href="/pages/solicitar-consulta.html">Solicitar consulta jurídica</a></li>
-                    <li><a href="/pages/contenido-academico.html">Contenido académico para estudiantes de Abogacía</a>
-                    </li>
+                    <li><a href="/pages/contact-form.html">Contacto</a></li>
+                    <li><a href="/pages/contenido-academico.html">Contenido académico</a></li>
                     <li><a href="/pages/tienda.html">Tienda</a></li>
                     <li><a href="/pages/about-me.html">Acerca de mí</a></li>
                 </ul>
@@ -130,13 +140,12 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- ===== SCRIPTS ===== -->
     <script src="/scripts/header.js"></script>
     <script src="/scripts/buttons-redirection.js"></script>
     <script src="/scripts/newsletter.js"></script>
     <script src="/scripts/footer.js"></script>
-
-
+    <script src="/scripts/floating-contact.js"></script>
 </body>
 
 </html>

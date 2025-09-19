@@ -1,0 +1,106 @@
+<!-- File: /pages/contact-form.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | Estudio Jurídico Haspert Piaggio</title>
+    <meta name="description"
+        content="Contactate con Estudio Jurídico Haspert Piaggio: enviá tu consulta y nos pondremos en contacto a la brevedad. Nombre, email, teléfono y consulta obligatorios." />
+    <link rel="canonical" href="https://tusitio.com/pages/contact-form.html" />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/floating-contact.css" />
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <a href="/index.html" id="header-home">
+            <h1>Dr. Santiago Haspert Piaggio</h1>
+        </a>
+        <div class="menu-icon">☰</div>
+        <nav class="nav-menu">
+            <ul>
+                <div class="close-icon">&times;</div>
+                <li><a href="/pages/solicitar-consulta.html" id="consulta-nav">Solicitar consulta jurídica</a></li>
+                <li><a href="#" id="academico-nav">Contenido académico para estudiantes</a></li>
+                <li><a href="#" id="tienda-nav">Tienda</a></li>
+                <li><a href="/pages/servicios.html" id="servicios-nav">Nuestros servicios</a></li>
+                <li><a href="#" id="about-nav">Acerca de mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <h2>Formulario de Contacto</h2>
+        <p>Completá tus datos y describí tu consulta; nos comunicaremos a la brevedad.</p>
+    </section>
+
+    <!-- ===== CONTACT FORM ===== -->
+    <section class="services" id="contact-form-section">
+        <div class="form-container">
+            <form class="contact-form" action="https://formspree.io/f/xdkgqjnd" method="POST">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+
+                <label for="email">Dirección de email</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required />
+
+                <label for="telefono">Número de teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required />
+
+                <label for="consulta">Tu consulta</label>
+                <textarea id="consulta" name="consulta" rows="5" placeholder="Contanos en qué podemos ayudarte"
+                    required></textarea>
+
+                <button type="submit" class="service-button">Enviar consulta</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter">
+        <h2>¡Suscribite a nuestro newsletter, recibí descuentos y enterate de las novedades!</h2>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Escribí tu correo electrónico…" required />
+            <button class="subscribe-button">SUSCRIBIRME</button>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Dr. Santiago Haspert Piaggio</h3>
+            <p>Paraná y Eva Perón S/N<br>Santa Elena, Entre Ríos.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="/pages/solicitar-consulta.html">Solicitar consulta jurídica</a></li>
+                    <li><a href="/pages/contenido-academico.html">Contenido académico para estudiantes de Abogacía</a>
+                    </li>
+                    <li><a href="/pages/tienda.html">Tienda</a></li>
+                    <li><a href="/pages/about-me.html">Acerca de mí</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/buttons-redirection.js"></script>
+    <script src="/scripts/newsletter.js"></script>
+    <script src="/scripts/footer.js"></script>
+    <script src="/scripts/floating-contact.js"></script>
+</body>
+
+</html>
