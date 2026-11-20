@@ -1,16 +1,16 @@
 window.I18N_ES = {
   'meta.title': 'Santiago Haspert — Apps y juegos',
-  'meta.description': 'Santiago Haspert crea apps para aprender idiomas y videojuegos para iPhone y Android: Cadmora, TalkBuddies y Super Lucky\'s Adventure.',
+  'meta.description': 'Desarrollador indie: herramientas para que sigas mejorando (Cadmora, TalkBuddies) y un juego muy divertido, Super Lucky\'s Adventure.',
   'skip': 'Ir al contenido',
   'nav.projects': 'Proyectos',
   'nav.about': 'Sobre mí',
   'nav.contact': 'Contacto',
 
-  'hero.eyebrow': 'Fundador · Desarrollador indie',
-  'hero.l1': 'Creo apps',
-  'hero.l2': 'y juegos que',
-  'hero.l3': 'la gente usa de verdad.',
-  'hero.lead': 'Soy Santiago: diseño, programo y lanzo mis propios productos para iPhone y Android. Herramientas con IA para aprender idiomas hablando, y un plataformero pixel art protagonizado por un Chihuahua muy valiente.',
+  'hero.eyebrow': 'Desarrollador indie',
+  'hero.l1': 'Creo herramientas',
+  'hero.l2': 'que te ayudan a',
+  'hero.l3': 'seguir mejorando.',
+  'hero.lead': 'Apps que te dan lo que necesitás para aprender, practicar y superar tu próximo desafío. Y, para relajar, un plataformero protagonizado por un Chihuahua muy valiente.',
   'hero.cta1': 'Conocé mis proyectos',
   'hero.badge': '3 productos para iOS y Android',
 
@@ -18,7 +18,7 @@ window.I18N_ES = {
   'marquee.games': 'Juegos indie',
 
   'projects.kicker': 'Proyectos',
-  'projects.title': 'Tres productos. <em>Una obsesión:</em> crear cosas que den ganas de abrir.',
+  'projects.title': 'Cosas que <em>lancé.</em>',
 
   'cta.download': 'Descargar la app',
   'cta.website': 'Ver sitio web',
@@ -44,9 +44,9 @@ window.I18N_ES = {
   'sla.c3': 'Soporte para mando',
 
   'about.kicker': 'Sobre mí',
-  'about.title': 'De los códigos legales <em>al código de verdad.</em>',
-  'about.p1': 'Me formé y trabajé como abogado en Argentina. En el camino descubrí que lo que más disfrutaba era construir cosas, así que aprendí por mi cuenta a diseñar y programar, y hoy creo mis propios productos de punta a punta.',
-  'about.p2': 'Me importa todo el recorrido: la idea, la interfaz, el código, el lanzamiento en App Store y Google Play, y todo lo que aprendo de quienes los usan. Vivo entre el español y el inglés, por eso gran parte de mi trabajo gira en torno a los idiomas.',
+  'about.title': 'Hola, soy <em>Santiago.</em>',
+  'about.p1': 'Me encanta aprender, y me encanta crear cosas que lo hagan más fácil. Las herramientas que me hubiera gustado tener hace unos años hoy forman parte de mi catálogo de apps: primero las hice para mí y después las pulí para todos.',
+  'about.p2': 'Me encargo de todo el recorrido: la idea, el diseño, el código, el lanzamiento y todo lo que viene después.',
   'pillar.1.t': 'Producto y diseño',
   'pillar.1.d': 'Del primer boceto a una interfaz pulida que da gusto usar todos los días.',
   'pillar.2.t': 'Ingeniería',
@@ -56,6 +56,6 @@ window.I18N_ES = {
 
   'contact.kicker': 'Hablemos',
   'contact.title': 'Seguí el proceso <em>o escribime.</em>',
-  'contact.lead': 'En Instagram comparto lo que estoy construyendo, los nuevos lanzamientos y el detrás de escena. Para colaboraciones o prensa, escribime.',
+  'contact.lead': '¿Tenés una idea, feedback o un récord para presumir? En Instagram comparto lanzamientos y el detrás de escena, o escribime directamente.',
   'contact.email': 'Escribime'
 };
