@@ -1,151 +1,247 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en" class="i18n-pending">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Santiago Haspert Piaggio – Abogado en Córdoba</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/floating-contact.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Santiago Haspert — Apps &amp; games</title>
+  <meta name="description" content="Santiago Haspert builds language-learning apps and games for iPhone and Android: Cadmora, TalkBuddies and Super Lucky's Adventure.">
+  <meta name="theme-color" content="#0b0a10">
+  <link rel="canonical" href="https://santiagohaspert.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Santiago Haspert — Apps & games">
+  <meta property="og:description" content="Founder and indie developer behind Cadmora, TalkBuddies and Super Lucky's Adventure.">
+  <meta property="og:url" content="https://santiagohaspert.com/">
+  <meta property="og:image" content="https://santiagohaspert.com/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/assets/js/es-home.js"></script>
+  <script src="/assets/js/i18n.js"></script>
 </head>
-
 <body>
-    <!-- ===== HEADER ===== -->
-    <header class="header">
-        <a href="/index.html" id="header-home">
-            <h1>Dr. Santiago Haspert Piaggio</h1>
-        </a>
-        <div class="menu-icon">☰</div>
-        <nav class="nav-menu">
-            <ul>
-                <div class="close-icon">&times;</div>
-                <li><a href="/pages/solicitar-consulta.html" id="consulta-nav">Solicitar consulta jurídica</a></li>
-                <li><a href="/pages/contact-form.html" id="contact-form-nav">Contacto</a></li>
-                <li><a href="#" id="academico-nav">Contenido académico para estudiantes</a></li>
-                <li><a href="#" id="tienda-nav">Tienda</a></li>
-                <li><a href="/pages/servicios.html" id="servicios-nav">Nuestros servicios</a></li>
-                <li><a href="#" id="about-nav">Acerca de mí</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
-    <!-- ===== WELCOME ===== -->
-    <section class="welcome">
-        <div class="welcome-content">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="grain" aria-hidden="true"></div>
 
-            <!-- HERO responsive -->
-            <picture class="hero-media">
-                <!-- Notebooks/monitores anchos: panorámica -->
-                <source srcset="/images/hero-panorama.png" media="(min-aspect-ratio: 16/9)" />
-                <!-- Teléfonos en vertical: cuadrada -->
-                <source srcset="/images/hero-cuadrada.png" media="(orientation: portrait)" />
-                <!-- Intermedias (fallback): rectangular -->
-                <img src="/images/hero-rectangular.png" alt="Estudio jurídico en Córdoba (Nueva Córdoba)">
-            </picture>
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="Santiago Haspert">
+      <span class="brand-mark">SH</span>
+      <span class="brand-name">Santiago Haspert</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+  </header>
 
-            <div class="text-content">
-                <h3>BIENVENIDO A SANTIAGOHASPERT.COM</h3>
-                <p>
-                    Somos un equipo de abogados con atención centralizada en <strong>Córdoba Capital</strong>.
-                    Con más de 5 años de trayectoria, nuestra especialidad abarca derecho civil, comercial,
-                    laboral y tributario, entre otros. Brindamos <strong>consultas presenciales en Córdoba</strong> y
-                    <strong>atención remota por videollamada</strong>.
-                    Nos comprometemos con la excelencia, la atención personalizada y resultados comprobables.
-                    También encontrarás recursos académicos para estudiantes de derecho. ¡Gracias por visitarnos!
-                </p>
-                <div class="button-group">
-                    <button id="book-consult" class="minimal-button">Sacar turno para consulta</button>
-                    <button id="services-button" class="minimal-button">Nuestros servicios jurídicos</button>
-                    <button id="academic-content" class="minimal-button">Contenido académico</button>
-                </div>
-            </div>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow reveal"><span class="dot"></span><span data-i18n="hero.eyebrow">Founder · Indie developer</span></p>
+        <h1 class="hero-title">
+          <span class="line"><span data-i18n="hero.l1">I build apps</span></span>
+          <span class="line"><span data-i18n="hero.l2">and games that</span></span>
+          <span class="line"><em data-i18n="hero.l3">people actually use.</em></span>
+        </h1>
+        <p class="lead reveal" data-i18n="hero.lead">I'm Santiago — I design, code and launch my own products for iPhone and Android: AI tools to learn languages by speaking, and a pixel-art platformer starring a very brave Chihuahua.</p>
+        <div class="hero-ctas reveal">
+          <a class="btn btn-primary" href="#projects"><span data-i18n="hero.cta1">Explore my projects</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m0 0-6-6m6 6 6-6"/></svg></a>
+          <a class="btn btn-ghost" href="https://instagram.com/santiagohaspert" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>@santiagohaspert</a>
         </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="portrait">
+          <div class="portrait-ring"></div>
+          <img src="/assets/img/santiago.webp" alt="" width="640" height="640">
+        </div>
+        <div class="orbit">
+          <a class="orb orb-1" href="#cadmora" tabindex="-1"><img src="/assets/img/cadmora/icon.webp" alt="" width="128" height="128"></a>
+          <a class="orb orb-2" href="#talkbuddies" tabindex="-1"><img src="/assets/img/talkbuddies/icon.webp" alt="" width="128" height="128"></a>
+          <a class="orb orb-3" href="#sla" tabindex="-1"><img src="/assets/img/sla/icon.webp" alt="" width="128" height="128"></a>
+        </div>
+        <div class="badge-float"><span class="pulse"></span><span data-i18n="hero.badge">3 products for iOS &amp; Android</span></div>
+      </div>
     </section>
 
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Cadmora</span><i>✦</i><span>TalkBuddies</span><i>✦</i><span>Super Lucky's Adventure</span><i>✦</i><span>iOS</span><i>✦</i><span>Android</span><i>✦</i><span data-i18n="marquee.ai">AI language practice</span><i>✦</i><span data-i18n="marquee.games">Indie games</span><i>✦</i>
+        <span>Cadmora</span><i>✦</i><span>TalkBuddies</span><i>✦</i><span>Super Lucky's Adventure</span><i>✦</i><span>iOS</span><i>✦</i><span>Android</span><i>✦</i><span data-i18n="marquee.ai">AI language practice</span><i>✦</i><span data-i18n="marquee.games">Indie games</span><i>✦</i>
+      </div>
+    </div>
 
-    <!-- ===== Sección de Servicios ===== -->
-    <section class="services">
-        <h2>NUESTROS SERVICIOS</h2>
-        <div class="services-grid">
-            <!-- Servicio 1 -->
-            <div class="service-item">
-                <img src="/images/asesoramiento-legal.png" alt="Asesoramiento Legal">
-                <h3>Asesoramiento Legal Personalizado</h3>
-                <p>
-                    Ofrecemos asesoramiento en derecho civil, jubilaciones y pensiones, laboral, tributario y más.
-                    Nuestro equipo está comprometido a resolver tus inquietudes con soluciones efectivas.
-                </p>
-                <a href="/pages/solicitar-consulta.html" class="service-button" id="consulta-button">
-                    Solicitar consulta jurídica
-                </a>
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <p class="kicker" data-i18n="projects.kicker">Selected work</p>
+        <h2 data-i18n-html="projects.title">Three products. <em>One obsession:</em> making things people love to open.</h2>
+      </div>
+
+      <!-- Cadmora -->
+      <article class="project p-cadmora reveal" id="cadmora">
+        <div class="project-info">
+          <div class="project-id">
+            <img class="app-icon" src="/assets/img/cadmora/icon.webp" alt="Cadmora icon" width="128" height="128" loading="lazy">
+            <div>
+              <h3>Cadmora</h3>
+              <p class="tag" data-i18n="cadmora.tag">Learn it. Practice it. Remember it.</p>
             </div>
-            <!-- Servicio 2 -->
-            <div class="service-item">
-                <img src="/images/material-academico.png" alt="Material Académico">
-                <h3>Material Académico para Estudiantes</h3>
-                <p>
-                    Accede a resúmenes, podcasts y recursos gratuitos para apoyar tu formación en abogacía.
-                </p>
-                <a href="/pages/contenido-academico.html" class="service-button" id="academico-button">
-                    Ver material académico
-                </a>
-            </div>
-            <!-- Servicio 3 -->
-            <div class="service-item">
-                <img src="/images/servicios.PNG" alt="Nuestros Servicios Jurídicos">
-                <h3>Nuestros Servicios Jurídicos</h3>
-                <p>
-                    Expertise en derecho civil, laboral y comercial con un equipo multidisciplinario y
-                    resultados comprobables.
-                </p>
-                <a href="/pages/servicios.html" class="service-button" id="services-button-secondary">
-                    Conozca nuestros servicios
-                </a>
-            </div>
+          </div>
+          <p class="desc" data-i18n="cadmora.desc">A complete language-practice system: AI roleplays for real-life situations, smart flashcards with spaced repetition and an interactive library to read at your level — so what you study turns into language you can actually use.</p>
+          <ul class="chips">
+            <li data-i18n="cadmora.c1">AI roleplays</li>
+            <li data-i18n="cadmora.c2">Smart flashcards</li>
+            <li data-i18n="cadmora.c3">Interactive library</li>
+          </ul>
+          <div class="project-ctas">
+            <a class="btn btn-primary" href="https://cadmoralearn.com/download" target="_blank" rel="noopener"><span data-i18n="cta.download">Download the app</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H8m9 0v9"/></svg></a>
+            <a class="btn btn-ghost" href="https://cadmoralearn.com" target="_blank" rel="noopener" data-i18n="cta.website">Visit website</a>
+          </div>
+          <p class="platforms" data-i18n="cadmora.platforms">iPhone · Android (early access)</p>
         </div>
+        <div class="project-media fan">
+          <img src="/assets/img/cadmora/shot-2.webp" alt="" width="480" height="1039" loading="lazy">
+          <img src="/assets/img/cadmora/shot-1.webp" alt="Cadmora app screenshot" width="480" height="1039" loading="lazy">
+          <img src="/assets/img/cadmora/shot-3.webp" alt="" width="480" height="1039" loading="lazy">
+        </div>
+      </article>
+
+      <!-- TalkBuddies -->
+      <article class="project p-talkbuddies reveal" id="talkbuddies">
+        <div class="project-info">
+          <div class="project-id">
+            <img class="app-icon" src="/assets/img/talkbuddies/icon.webp" alt="TalkBuddies icon" width="128" height="128" loading="lazy">
+            <div>
+              <h3>TalkBuddies</h3>
+              <p class="tag" data-i18n="tb.tag">Speak fluently with AI friends.</p>
+            </div>
+          </div>
+          <p class="desc" data-i18n="tb.desc">Learn languages the way you actually use them: chatting, sending voice messages and calling AI characters with their own personalities. Practise English, Italian, French, German, Spanish and more — without the pressure.</p>
+          <ul class="chips">
+            <li data-i18n="tb.c1">Chat &amp; voice calls</li>
+            <li data-i18n="tb.c2">8+ languages</li>
+            <li data-i18n="tb.c3">Instant feedback</li>
+          </ul>
+          <div class="project-ctas">
+            <a class="btn btn-primary" href="https://chatwithbuddies.com/download" target="_blank" rel="noopener"><span data-i18n="cta.download">Download the app</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H8m9 0v9"/></svg></a>
+            <a class="btn btn-ghost" href="https://chatwithbuddies.com" target="_blank" rel="noopener" data-i18n="cta.website">Visit website</a>
+          </div>
+          <p class="platforms">iPhone · Android</p>
+        </div>
+        <div class="project-media fan">
+          <img src="/assets/img/talkbuddies/shot-2.webp" alt="" width="480" height="1043" loading="lazy">
+          <img src="/assets/img/talkbuddies/shot-1.webp" alt="TalkBuddies app screenshot" width="480" height="1043" loading="lazy">
+          <img src="/assets/img/talkbuddies/shot-3.webp" alt="" width="480" height="1043" loading="lazy">
+        </div>
+      </article>
+
+      <!-- Super Lucky's Adventure -->
+      <article class="project p-sla reveal" id="sla">
+        <div class="project-info">
+          <div class="project-id">
+            <img class="app-icon" src="/assets/img/sla/icon.webp" alt="Super Lucky's Adventure icon" width="128" height="128" loading="lazy">
+            <div>
+              <h3>Super Lucky's Adventure</h3>
+              <p class="tag" data-i18n="sla.tag">A pixel-art platformer with a brave Chihuahua.</p>
+            </div>
+          </div>
+          <p class="desc" data-i18n="sla.desc">Help Lucky rescue his friend Chloe from the evil cat Theo. Run, jump and explore colourful levels full of enemies, bosses and secrets — with multiple difficulty levels, achievements and controller support. Made with Unity by Thiago King Games.</p>
+          <ul class="chips">
+            <li data-i18n="sla.c1">Platformer</li>
+            <li data-i18n="sla.c2">Boss fights</li>
+            <li data-i18n="sla.c3">Controller support</li>
+          </ul>
+          <div class="project-ctas">
+            <a class="btn btn-primary" href="/superluckysadventure/"><span data-i18n="cta.play">Get the game</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H8m9 0v9"/></svg></a>
+          </div>
+          <p class="platforms">iPhone · Android</p>
+        </div>
+        <div class="project-media landscape">
+          <img src="/assets/img/sla/shot-1.webp" alt="Super Lucky's Adventure gameplay" width="1200" height="555" loading="lazy">
+          <img src="/assets/img/sla/shot-3.webp" alt="" width="1200" height="555" loading="lazy">
+        </div>
+      </article>
     </section>
 
-    <!-- ===== NEWSLETTER ===== -->
-    <section class="newsletter">
-        <h2>¡Suscríbete a nuestro newsletter y enterate de las novedades!</h2>
-        <div class="newsletter-form">
-            <input type="email" placeholder="Escribe tu correo electrónico..." required>
-            <button class="subscribe-button">SUSCRIBIRSE</button>
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="kicker" data-i18n="about.kicker">About me</p>
+          <h2 data-i18n-html="about.title">From law books <em>to product launches.</em></h2>
+          <p data-i18n="about.p1">I trained and worked as a lawyer in Argentina. Along the way I realised what I enjoyed most was building things — so I taught myself to design and code, and today I create my own products end to end.</p>
+          <p data-i18n="about.p2">I care about the whole journey: the idea, the interface, the code, the launch on the App Store and Google Play, and everything I learn from the people who use it. I live between Spanish and English, which is why so much of my work is about languages.</p>
         </div>
+        <ul class="pillars">
+          <li class="pillar reveal">
+            <span class="pillar-n">01</span>
+            <h3 data-i18n="pillar.1.t">Product &amp; design</h3>
+            <p data-i18n="pillar.1.d">From the first sketch to a polished interface that feels good to use every day.</p>
+          </li>
+          <li class="pillar reveal">
+            <span class="pillar-n">02</span>
+            <h3 data-i18n="pillar.2.t">Engineering</h3>
+            <p data-i18n="pillar.2.d">Web and mobile apps with Next.js and Capacitor, AI features, and games built with Unity.</p>
+          </li>
+          <li class="pillar reveal">
+            <span class="pillar-n">03</span>
+            <h3 data-i18n="pillar.3.t">Shipping</h3>
+            <p data-i18n="pillar.3.d">Publishing, analytics and constant iteration — real products, in real people's hands.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="footer-content">
-            <h3>Dr. Santiago Haspert Piaggio</h3>
-            <p>Calle Chacabuco 150 – Oficinas 11 y 12 “B”<br>Córdoba Capital, Argentina.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-            </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="/pages/solicitar-consulta.html">Solicitar consulta jurídica</a></li>
-                    <li><a href="/pages/contact-form.html">Contacto</a></li>
-                    <li><a href="/pages/contenido-academico.html">Contenido académico</a></li>
-                    <li><a href="/pages/tienda.html">Tienda</a></li>
-                    <li><a href="/pages/about-me.html">Acerca de mí</a></li>
-                </ul>
-            </nav>
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact-card reveal">
+        <p class="kicker" data-i18n="contact.kicker">Let's talk</p>
+        <h2 data-i18n-html="contact.title">Follow the journey <em>or say hi.</em></h2>
+        <p class="lead" data-i18n="contact.lead">I share what I'm building, new launches and behind-the-scenes on Instagram. For collaborations or press, write to me.</p>
+        <div class="socials">
+          <a class="social" href="https://instagram.com/santiagohaspert" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+            <span><strong>Instagram</strong><small>@santiagohaspert</small></span>
+          </a>
+          <a class="social" href="https://www.youtube.com/santiagohaspert" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg>
+            <span><strong>YouTube</strong><small>@santiagohaspert</small></span>
+          </a>
+          <a class="social" href="https://github.com/Santiago76945" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+            <span><strong>GitHub</strong><small>Santiago76945</small></span>
+          </a>
+          <a class="social" href="mailto:santiago_76945@yahoo.es">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+            <span><strong>Email</strong><small data-i18n="contact.email">Write to me</small></span>
+          </a>
         </div>
-    </footer>
+      </div>
+    </section>
+  </main>
 
-    <!-- ===== SCRIPTS ===== -->
-    <script src="/scripts/header.js"></script>
-    <script src="/scripts/buttons-redirection.js"></script>
-    <script src="/scripts/newsletter.js"></script>
-    <script src="/scripts/footer.js"></script>
-    <script src="/scripts/floating-contact.js"></script>
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Santiago Haspert</p>
+    <p class="footer-links">
+      <a href="https://cadmoralearn.com/download" target="_blank" rel="noopener">Cadmora</a>
+      <a href="https://chatwithbuddies.com/download" target="_blank" rel="noopener">TalkBuddies</a>
+      <a href="/superluckysadventure/">Super Lucky's Adventure</a>
+    </p>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
 </body>
-
 </html>

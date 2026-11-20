@@ -1,0 +1,12 @@
+# Super Lucky's Adventure hub on its own subdomain (served in place, URL stays short)
+https://superluckysadventure.santiagohaspert.com/            /superluckysadventure/index.html  200!
+https://superluckysadventure.santiagohaspert.com/index.html  /superluckysadventure/index.html  200!
+
+# Short links
+/sla            /superluckysadventure/                        301
+/lucky          /superluckysadventure/                        301
+/cadmora        https://cadmoralearn.com/download             302
+/talkbuddies    https://chatwithbuddies.com/download          302
+
+# Former law-practice pages
+/pages/*        /    301
