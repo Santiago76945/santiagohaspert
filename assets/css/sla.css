@@ -27,7 +27,7 @@ a { color: inherit; }
 :focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; border-radius: 10px; }
 
 /* clouds */
-.sky { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.sky { position: fixed; top: -60px; left: 0; right: 0; height: calc(100vh + 120px); height: calc(100lvh + 120px); z-index: -1; pointer-events: none; overflow: hidden; }
 .cloud { position: absolute; left: -260px; width: 200px; height: 60px; background: #fff;
   box-shadow: 40px -24px 0 0 #fff, 90px -12px 0 0 #fff, 130px 0 0 0 #fff, 60px 10px 0 0 #fff;
   border-radius: 0; image-rendering: pixelated; animation: float linear infinite; opacity: .5; filter: drop-shadow(0 6px 0 rgba(30, 90, 170, .25)); }
@@ -107,7 +107,7 @@ a { color: inherit; }
 .stores.small .store-txt strong { font-size: 1.1rem; }
 
 /* ground + footer */
-.foot { position: relative; margin-top: 80px; padding: 60px 16px 40px; text-align: center; color: #fff; background: var(--dirt);
+.foot { position: relative; margin-top: 80px; padding: 60px 16px calc(40px + env(safe-area-inset-bottom)); text-align: center; color: #fff; background: var(--dirt);
   box-shadow: inset 0 18px 0 var(--grass), inset 0 24px 0 #4fa834; font-weight: 700; }
 .foot img { margin: 0 auto 10px; width: 56px; height: 56px; }
 .foot p { margin: 0 0 10px; }
